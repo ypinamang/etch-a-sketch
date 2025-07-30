@@ -10,7 +10,7 @@ createButton.addEventListener("click", () =>
     if (!isNaN(gridSize) && (gridSize > 0) && (gridSize <= 100)){
         createGrid(gridSize);
     } else {
-        alert("Enter a number between 1 and 100")
+        alert("Enter a number between 1 and 100");
 }
 }
 );
@@ -39,7 +39,7 @@ function createGrid(size=gridSize) {
     square.addEventListener("mouseover", () => {
         const squareStyle = getComputedStyle(square);
         const currentOpacity = parseFloat(squareStyle.opacity);
-        const opacityIncrement = currentOpacity + 0.3;
+        const opacityIncrement = currentOpacity + 0.1;
         square.style.opacity = opacityIncrement.toString();
         
         if (!square.classList.contains("hovered-once")) {
