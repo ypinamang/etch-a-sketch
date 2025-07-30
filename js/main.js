@@ -59,3 +59,14 @@ function clearGrid() {
 createGrid();
 
 
+function rgbGenerator() {
+    const rgb = [];
+    
+    for (let i = 1; i <= 3; i++) {
+        const colorValue = Math.floor(Math.random() * 255);
+        rgb.push(colorValue.toString());
+    }
+
+    const rgbValue = rgb.join(",");
+    return `rgb(${rgbValue})`
+}
