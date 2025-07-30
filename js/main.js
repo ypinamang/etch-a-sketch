@@ -1,7 +1,6 @@
 const mainWrapper = document.querySelector(".main-wrapper");
 const createButton = document.querySelector(".size-btn");
 const clearButton = document.querySelector(".clear-btn");
-const colorPicker = [""]
 let gridSize = 12
 
 createButton.addEventListener("click", () =>
@@ -42,6 +41,8 @@ function createGrid(size=gridSize) {
         const currentOpacity = parseFloat(squareStyle.opacity);
         const opacityIncrement = currentOpacity + 0.3;
         square.style.opacity = opacityIncrement.toString();
+
+        square.style.backgroundColor = rgbGenerator();
     });
 });
 
@@ -70,3 +71,4 @@ function rgbGenerator() {
     const rgbValue = rgb.join(",");
     return `rgb(${rgbValue})`
 }
+
