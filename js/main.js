@@ -41,9 +41,12 @@ function createGrid(size=gridSize) {
         const currentOpacity = parseFloat(squareStyle.opacity);
         const opacityIncrement = currentOpacity + 0.3;
         square.style.opacity = opacityIncrement.toString();
-
+        
+        if (!square.classList.contains("hovered-once")) {
         square.style.backgroundColor = rgbGenerator();
-    });
+        square.classList.add("hovered-once");
+
+    }});
 });
 
 }
