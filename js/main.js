@@ -1,8 +1,10 @@
 // Create a 4x4 grid
 const mainWrapper = document.querySelector(".main-wrapper");
+const sizeButton = document.querySelector(".size-btn");
 
-const gridPrompt = prompt("Hey...what's your wish for this here square grid?")
-const gridSize = parseInt(gridPrompt);
+let gridSize = 12;
+
+
 
 for (let i = 1; i <= gridSize; i++) {
     const singleRow = document.createElement("div");
